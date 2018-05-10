@@ -35,17 +35,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_cthdn_sl = new System.Windows.Forms.TextBox();
+            this.txt_cthdn_dg = new System.Windows.Forms.TextBox();
+            this.txt_cthdn_tt = new System.Windows.Forms.TextBox();
+            this.txt_cthdn_ma = new System.Windows.Forms.TextBox();
+            this.txt_cthdn_masp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +72,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Thêm mới";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -111,15 +110,6 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Thành tiền";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(57, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "label1";
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(176, 346);
@@ -128,6 +118,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -137,6 +128,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -156,65 +148,56 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Chi tiết hóa đơn nhập hàng";
             // 
-            // textBox1
+            // txt_cthdn_sl
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txt_cthdn_sl.Location = new System.Drawing.Point(123, 94);
+            this.txt_cthdn_sl.Name = "txt_cthdn_sl";
+            this.txt_cthdn_sl.Size = new System.Drawing.Size(100, 20);
+            this.txt_cthdn_sl.TabIndex = 3;
             // 
-            // textBox2
+            // txt_cthdn_dg
             // 
-            this.textBox2.Location = new System.Drawing.Point(408, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.txt_cthdn_dg.Location = new System.Drawing.Point(408, 94);
+            this.txt_cthdn_dg.Name = "txt_cthdn_dg";
+            this.txt_cthdn_dg.Size = new System.Drawing.Size(100, 20);
+            this.txt_cthdn_dg.TabIndex = 3;
             // 
-            // textBox3
+            // txt_cthdn_tt
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.txt_cthdn_tt.Location = new System.Drawing.Point(408, 122);
+            this.txt_cthdn_tt.Name = "txt_cthdn_tt";
+            this.txt_cthdn_tt.Size = new System.Drawing.Size(100, 20);
+            this.txt_cthdn_tt.TabIndex = 3;
             // 
-            // textBox4
+            // txt_cthdn_ma
             // 
-            this.textBox4.Location = new System.Drawing.Point(408, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.txt_cthdn_ma.Location = new System.Drawing.Point(123, 58);
+            this.txt_cthdn_ma.Name = "txt_cthdn_ma";
+            this.txt_cthdn_ma.Size = new System.Drawing.Size(100, 20);
+            this.txt_cthdn_ma.TabIndex = 3;
             // 
-            // textBox5
+            // txt_cthdn_masp
             // 
-            this.textBox5.Location = new System.Drawing.Point(123, 58);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 3;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(408, 55);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 3;
+            this.txt_cthdn_masp.Location = new System.Drawing.Point(408, 55);
+            this.txt_cthdn_masp.Name = "txt_cthdn_masp";
+            this.txt_cthdn_masp.Size = new System.Drawing.Size(100, 20);
+            this.txt_cthdn_masp.TabIndex = 3;
             // 
             // CTHDN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 381);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_cthdn_masp);
+            this.Controls.Add(this.txt_cthdn_tt);
+            this.Controls.Add(this.txt_cthdn_dg);
+            this.Controls.Add(this.txt_cthdn_ma);
+            this.Controls.Add(this.txt_cthdn_sl);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
@@ -238,16 +221,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_cthdn_sl;
+        private System.Windows.Forms.TextBox txt_cthdn_dg;
+        private System.Windows.Forms.TextBox txt_cthdn_tt;
+        private System.Windows.Forms.TextBox txt_cthdn_ma;
+        private System.Windows.Forms.TextBox txt_cthdn_masp;
     }
 }

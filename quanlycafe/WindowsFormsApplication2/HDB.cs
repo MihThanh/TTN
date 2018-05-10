@@ -59,7 +59,7 @@ namespace WindowsFormsApplication2
             {
                 SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string them = "INSERT INTO hoadonban (mahdb,ngayban,tongtien ,manv,makh) VALUES ('" + txt_hdb_ma.Text + "','" + txt_hdb_ngay.Text + "','" + txt_hdb_tien + "','"+txt_hdb_manv.Text+"','"+txt_hdb_makh.Text+"')";
+                string them = "INSERT INTO hoadonban (mahdb,ngayban,tongtien ,manv,makh) VALUES ('" + txt_hdb_ma.Text + "','" + txt_hdb_ngay.Text + "','" + txt_hdb_tien.Text + "','"+txt_hdb_manv.Text+"','"+txt_hdb_makh.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
                 con.Close();

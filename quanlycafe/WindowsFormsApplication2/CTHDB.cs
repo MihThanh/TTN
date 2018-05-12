@@ -87,7 +87,7 @@ namespace WindowsFormsApplication2
 
                 SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string sua = "update ct_hoadonban set masp='"+txt_cthdb_ma.Text+"' ,soluong='"+txt_cthdb_sl.Text+"',thanhtien='"+txt_cthdb_tt.Text+"' ,dongia='"+txt_cthdb_dg.Text+"' where manhdb = '" + txt_cthdb_ma.Text + "'";
+                string sua = "update ct_hoadonban set  soluong='"+txt_cthdb_sl.Text+"',thanhtien='"+txt_cthdb_tt.Text+"' ,dongia='"+txt_cthdb_dg.Text+"' where manhdb = '" + txt_cthdb_ma.Text + "' and masp='" + txt_cthdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
                 con.Close();
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication2
 
                 SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string xoa = "delete ct_hoadonban where mahbb='" + txt_cthdb_ma.Text + "'";
+                string xoa = "delete ct_hoadonban where mahbb='" + txt_cthdb_ma.Text + "' and masp='"+txt_cthdb_masp.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
                 con.Close();

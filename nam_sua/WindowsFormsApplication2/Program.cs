@@ -17,7 +17,8 @@ namespace WindowsFormsApplication2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            Application.Run(new KH());
+            //Application.Run(new DMNCC());
+            Application.Run(new TKHH());
         }
     }
 }

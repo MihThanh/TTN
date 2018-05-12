@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace WindowsFormsApplication2
 {
-    public partial class CTHDN : Form
+    public partial class CTHDB : Form
     {
-        public CTHDN()
+        public CTHDB()
         {
             InitializeComponent();
             ketnoi();
@@ -25,9 +24,9 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string sql = "SELECT * FROM ct_hoadonnhap";
+                string sql = "SELECT * FROM ct_hoadonban";
                 SqlCommand com = new SqlCommand(sql, con);
                 SqlDataAdapter data = new SqlDataAdapter(com);
                 DataTable table = new DataTable();
@@ -44,22 +43,34 @@ namespace WindowsFormsApplication2
         }
         private void load()
         {
-            txt_cthdn_ma.DataBindings.Add("Text", dataGridView1.DataSource, "MAHD");
-            txt_cthdn_masp.DataBindings.Add("Text", dataGridView1.DataSource, "MASP");
-            txt_cthdn_sl.DataBindings.Add("Text", dataGridView1.DataSource, "SOLUONG");
-            txt_cthdn_dg.DataBindings.Add("Text", dataGridView1.DataSource, "DONGIA");
-            txt_cthdn_tt.DataBindings.Add("Text", dataGridView1.DataSource, "TONGTIEN");
+            txt_cthdb_ma.DataBindings.Add("Text", dataGridView1.DataSource, "MAHD");
+            txt_cthdb_masp.DataBindings.Add("Text", dataGridView1.DataSource, "MASP");
+            txt_cthdb_sl.DataBindings.Add("Text", dataGridView1.DataSource, "SOLUONG");
+            txt_cthdb_dg.DataBindings.Add("Text", dataGridView1.DataSource, "DONGIA");
+            txt_cthdb_tt.DataBindings.Add("Text", dataGridView1.DataSource, "TONGTIEN");
 
         }
+
+        private void CTHDB_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string them = "INSERT INTO ct_hoadonnhap (mahdn ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdn_ma.Text + "','" + txt_cthdn_masp.Text + "','" + txt_cthdn_sl.Text + "','" + txt_cthdn_tt.Text + "','" + txt_cthdn_dg.Text + "')";
+                string them = "INSERT INTO ct_hoadonban (mahdb ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdb_ma.Text + "','" + txt_cthdb_masp.Text + "','" + txt_cthdb_sl.Text + "','" + txt_cthdb_tt.Text + "','" + txt_cthdb_dg.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -67,18 +78,20 @@ namespace WindowsFormsApplication2
             {
                 MessageBox.Show("Không thêm được! Hãy thử lại.");
             }
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string sua = "update ct_hoadonnhap set  soluong='" + txt_cthdn_sl.Text + "',thanhtien='" + txt_cthdn_tt.Text + "' ,dongia='" + txt_cthdn_dg.Text + "' where manhdn = '" + txt_cthdn_ma.Text + "' and masp='" + txt_cthdn_ma.Text + "'";
+                string sua = "update ct_hoadonban set  soluong='"+txt_cthdb_sl.Text+"',thanhtien='"+txt_cthdb_tt.Text+"' ,dongia='"+txt_cthdb_dg.Text+"' where manhdb = '" + txt_cthdb_ma.Text + "' and masp='" + txt_cthdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }
@@ -88,16 +101,17 @@ namespace WindowsFormsApplication2
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string xoa = "delete ct_hoadonnhap where mahbb='" + txt_cthdn_ma.Text + "' and masp='"+txt_cthdn_masp.Text+"'";
+                string xoa = "delete ct_hoadonban where mahbb='" + txt_cthdb_ma.Text + "' and masp='"+txt_cthdb_masp.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }

@@ -9,25 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace WindowsFormsApplication2
 {
-    public partial class CTHDN : Form
+    public partial class NV : Form
     {
-        public CTHDN()
+        public NV()
         {
             InitializeComponent();
             ketnoi();
             load();
         }
-
         private void ketnoi()
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string sql = "SELECT * FROM ct_hoadonnhap";
+                string sql = "SELECT * FROM nhanvien";
                 SqlCommand com = new SqlCommand(sql, con);
                 SqlDataAdapter data = new SqlDataAdapter(com);
                 DataTable table = new DataTable();
@@ -44,22 +42,24 @@ namespace WindowsFormsApplication2
         }
         private void load()
         {
-            txt_cthdn_ma.DataBindings.Add("Text", dataGridView1.DataSource, "MAHD");
-            txt_cthdn_masp.DataBindings.Add("Text", dataGridView1.DataSource, "MASP");
-            txt_cthdn_sl.DataBindings.Add("Text", dataGridView1.DataSource, "SOLUONG");
-            txt_cthdn_dg.DataBindings.Add("Text", dataGridView1.DataSource, "DONGIA");
-            txt_cthdn_tt.DataBindings.Add("Text", dataGridView1.DataSource, "TONGTIEN");
+            txt_nv_ma.DataBindings.Add("Text", dataGridView1.DataSource, "MANV");
+            txt_nv_dc.DataBindings.Add("Text", dataGridView1.DataSource, "DIACHI");
+            txt_nv_dt.DataBindings.Add("Text", dataGridView1.DataSource, "SDT");
+            txt_nv_gt.DataBindings.Add("Text", dataGridView1.DataSource, "GT");
+            txt_nv_ns.DataBindings.Add("Text", dataGridView1.DataSource, "NGAYSINH");
+            txt_nv_ten.DataBindings.Add("Text", dataGridView1.DataSource, "HOTEN");
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string them = "INSERT INTO ct_hoadonnhap (mahdn ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdn_ma.Text + "','" + txt_cthdn_masp.Text + "','" + txt_cthdn_sl.Text + "','" + txt_cthdn_tt.Text + "','" + txt_cthdn_dg.Text + "')";
+                string them = "INSERT INTO nhanvien(manv ,tennv,diachi ,gioitinh ,ns ,sdt ) VALUES ('" + txt_nv_ma.Text + "',N'" + txt_nv_ten.Text + "',N'" + txt_nv_dc.Text + "',N'" + txt_nv_gt.Text + "','" + txt_nv_ns.Text + "','"+txt_nv_ns.Text+"','"+txt_nv_dt.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -69,16 +69,17 @@ namespace WindowsFormsApplication2
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string sua = "update ct_hoadonnhap set  soluong='" + txt_cthdn_sl.Text + "',thanhtien='" + txt_cthdn_tt.Text + "' ,dongia='" + txt_cthdn_dg.Text + "' where manhdn = '" + txt_cthdn_ma.Text + "' and masp='" + txt_cthdn_ma.Text + "'";
+                string sua = "update nhanvien set tennv=N'"+txt_nv_ten.Text+"',diachi=N'"+txt_nv_dc+"' ,gioitinh=N'"+txt_nv_gt+"' ,ns='"+txt_nv_ns.Text+"' ,sdt='"+txt_nv_dt.Text+"' where manv = '"+txt_nv_ma.Text+"'" ;
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }
@@ -88,16 +89,17 @@ namespace WindowsFormsApplication2
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
                 con.Open();
-                string xoa = "delete ct_hoadonnhap where mahbb='" + txt_cthdn_ma.Text + "' and masp='"+txt_cthdn_masp.Text+"'";
+                string xoa = "delete nhanvien where manv='" +txt_nv_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }

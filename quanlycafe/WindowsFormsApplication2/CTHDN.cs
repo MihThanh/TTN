@@ -60,6 +60,7 @@ namespace WindowsFormsApplication2
                 string them = "INSERT INTO ct_hoadonnhap (mahdn ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdn_ma.Text + "','" + txt_cthdn_masp.Text + "','" + txt_cthdn_sl.Text + "','" + txt_cthdn_tt.Text + "','" + txt_cthdn_dg.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -79,6 +80,7 @@ namespace WindowsFormsApplication2
                 string sua = "update ct_hoadonnhap set  soluong='" + txt_cthdn_sl.Text + "',thanhtien='" + txt_cthdn_tt.Text + "' ,dongia='" + txt_cthdn_dg.Text + "' where manhdn = '" + txt_cthdn_ma.Text + "' and masp='" + txt_cthdn_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }
@@ -98,6 +100,7 @@ namespace WindowsFormsApplication2
                 string xoa = "delete ct_hoadonnhap where mahbb='" + txt_cthdn_ma.Text + "' and masp='"+txt_cthdn_masp.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }

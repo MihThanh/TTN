@@ -56,6 +56,7 @@ namespace WindowsFormsApplication2
                 string them = "INSERT INTO loai (maloai,tenloai) VALUES ('"+txt_loai_ma.Text+"',N'"+txt_loai_ten.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -74,6 +75,7 @@ namespace WindowsFormsApplication2
                 string sua = "update loai set tenloai=N'" + txt_loai_ten.Text + "' where maloai = '" + txt_loai_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửa thành công!");
             }
@@ -92,6 +94,7 @@ namespace WindowsFormsApplication2
                 string xoa = "delete loai where maloai='" + txt_loai_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã xóa thành công!");
             }

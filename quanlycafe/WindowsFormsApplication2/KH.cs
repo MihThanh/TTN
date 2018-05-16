@@ -54,6 +54,7 @@ namespace WindowsFormsApplication2
                 string them = "INSERT INTO khachhang(makh,tenkh) VALUES('"+txt_kh_ma.Text+"',N'"+txt_kh_ten.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -73,6 +74,7 @@ namespace WindowsFormsApplication2
                 string sua = "update khachhang set  tenkh='" + txt_kh_ten.Text + "'  where makh ='" + txt_kh_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }
@@ -92,6 +94,7 @@ namespace WindowsFormsApplication2
                 string xoa = "delete khachhang where makh='" + txt_kh_ma.Text + "' ";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }

@@ -57,6 +57,7 @@ namespace WindowsFormsApplication2
                 string them = "INSERT INTO nhacc (mancc,tenncc,diachi) VALUES ('"+txt_ncc_ma.Text+"','"+txt_ncc_ten.Text+"','"+txt_ncc_dc.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -64,11 +65,7 @@ namespace WindowsFormsApplication2
             {
                 MessageBox.Show("Không thêm được! Hãy thử lại.");
             }
-            finally
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                con.Close();
-            }
+   
 
         }
 
@@ -82,6 +79,7 @@ namespace WindowsFormsApplication2
                 string sua = "update nhacc set tenncc = N'"+txt_ncc_ten.Text+"',diachi = N'"+txt_ncc_dc+"' where mancc = '"+txt_ncc_ma.Text+"'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửa thành công!");
             }
@@ -89,11 +87,7 @@ namespace WindowsFormsApplication2
             {
                 MessageBox.Show("Không thêm được! Hãy thử lại.");
             }
-            finally
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                con.Close();
-            }
+
 
         }
 
@@ -106,6 +100,7 @@ namespace WindowsFormsApplication2
                 string xoa = "delete nhacc where mancc='"+txt_ncc_ma.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã xóa thành công!");
             }
@@ -113,11 +108,7 @@ namespace WindowsFormsApplication2
             {
                 MessageBox.Show("Không thêm được! Hãy thử lại.");
             }
-            finally
-            {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\NAM;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
-                con.Close();
-            }
+       
 
         }
     }

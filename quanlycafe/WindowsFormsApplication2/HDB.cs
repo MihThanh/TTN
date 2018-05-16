@@ -62,6 +62,7 @@ namespace WindowsFormsApplication2
                 string them = "INSERT INTO hoadonban (mahdb,ngayban,tongtien ,manv,makh) VALUES ('" + txt_hdb_ma.Text + "','" + txt_hdb_ngay.Text + "','" + txt_hdb_tien.Text + "','"+txt_hdb_manv.Text+"','"+txt_hdb_makh.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
             }
@@ -82,6 +83,7 @@ namespace WindowsFormsApplication2
                 string sua = "update hoadonban set manv = N'" + txt_hdb_manv.Text + "',makh = '" + txt_hdb_makh.Text + "',ngayban = '" + txt_hdb_ngay.Text + ",tongtien='"+txt_hdb_tien.Text+"' where manhdb = '" + txt_hdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
                 com_sua.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }
@@ -101,6 +103,7 @@ namespace WindowsFormsApplication2
                 string xoa = "delete hoadonban where mahbb='"+txt_hdb_ma.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
                 com_xoa.ExecuteNonQuery();
+                ketnoi();
                 con.Close();
                 MessageBox.Show("Đã sửathành công !");
             }

@@ -1,0 +1,80 @@
+E:\bantv_chinh\tv\tv\bin\Debug\tv.exe.config
+E:\bantv_chinh\tv\tv\bin\Debug\tv.exe
+E:\bantv_chinh\tv\tv\bin\Debug\tv.pdb
+E:\bantv_chinh\tv\tv\obj\Debug\tv.csprojResolveAssemblyReference.cache
+E:\bantv_chinh\tv\tv\obj\Debug\tv.Properties.Resources.resources
+E:\bantv_chinh\tv\tv\obj\Debug\tv.csproj.GenerateResource.Cache
+E:\bantv_chinh\tv\tv\obj\Debug\tv.exe
+E:\bantv_chinh\tv\tv\obj\Debug\tv.pdb
+E:\bantv_chinh\tv\tv\obj\Debug\tv.user_thanhtoan.resources
+E:\bantv_chinh\tv\tv\obj\Debug\tv.f_hethong.resources
+E:\bantv_chinh\tv\tv\obj\Debug\tv.user_thongke.resources
+E:\bantv_chinh\tv\tv\obj\Debug\tv.user_sanpham.resources
+E:\bantv_chinh\tv\tv\obj\Debug\tv.f_login.resources
+D:\bantv_chinh\tv\tv\bin\Debug\tv.exe.config
+D:\bantv_chinh\tv\tv\obj\Debug\tv.exe
+D:\bantv_chinh\tv\tv\obj\Debug\tv.pdb
+D:\bantv_chinh\tv\tv\bin\Debug\tv.exe
+D:\bantv_chinh\tv\tv\bin\Debug\tv.pdb
+D:\bantv_chinh\tv\tv\obj\Debug\tv.csprojResolveAssemblyReference.cache
+D:\bantv_chinh\tv\tv\obj\Debug\tv.f_hethong.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.f_login.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.Properties.Resources.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.user_sanpham.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.user_thanhtoan.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.user_thongke.resources
+D:\bantv_chinh\tv\tv\obj\Debug\tv.csproj.GenerateResource.Cache
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\bin\Debug\tv.exe.config
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.exe
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.pdb
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\bin\Debug\tv.exe
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\bin\Debug\tv.pdb
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.csprojResolveAssemblyReference.cache
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.f_hethong.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.f_login.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.Properties.Resources.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.user_sanpham.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.user_thanhtoan.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.user_thongke.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.csproj.GenerateResource.Cache
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.f_dangki.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.f_qltaikhoan.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.user_nhacc.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.user_nhanvien.resources
+C:\Users\Vaio\Desktop\Thực tập nhóm\bantv_chinh\tv\tv\obj\Debug\tv.f_themncc.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\bin\Debug\tv.exe.config
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.exe
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.pdb
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\bin\Debug\tv.exe
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\bin\Debug\tv.pdb
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.f_dangki.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.f_hethong.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.f_login.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.f_qltaikhoan.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.f_themncc.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.Properties.Resources.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.user_nhacc.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.user_nhanvien.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.user_sanpham.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.user_thanhtoan.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.user_thongke.resources
+C:\Users\Admin\Downloads\coccoc\bantv\bantv_chinh\tv\tv\obj\Debug\tv.csproj.GenerateResource.Cache
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\bin\Debug\tv.exe.config
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.exe
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.pdb
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\bin\Debug\tv.exe
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\bin\Debug\tv.pdb
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.csprojResolveAssemblyReference.cache
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.f_dangki.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.f_hethong.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.f_login.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.f_qltaikhoan.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.f_themncc.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.Properties.Resources.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.user_nhacc.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.user_nhanvien.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.user_sanpham.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.user_thanhtoan.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.user_thongke.resources
+C:\Users\Vaio\Desktop\bantv_chinh\tv\tv\obj\Debug\tv.csproj.GenerateResource.Cache

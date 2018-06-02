@@ -51,7 +51,7 @@ namespace tv
             txt_sdt.DataBindings.Add("Text", data_nv.DataSource, "SDT");
         }
 
-        //hong
+
         private void but_them_sp_Click(object sender, EventArgs e)
         {
             try

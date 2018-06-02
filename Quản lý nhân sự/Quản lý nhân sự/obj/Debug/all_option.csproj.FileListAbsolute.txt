@@ -1,0 +1,23 @@
+D:\c#\all_option\all_option\bin\Debug\all_option.exe.config
+D:\c#\all_option\all_option\bin\Debug\all_option.exe
+D:\c#\all_option\all_option\bin\Debug\all_option.pdb
+D:\c#\all_option\all_option\obj\Debug\all_option.login.resources
+D:\c#\all_option\all_option\obj\Debug\all_option.Properties.Resources.resources
+D:\c#\all_option\all_option\obj\Debug\all_option.csproj.GenerateResource.Cache
+D:\c#\all_option\all_option\obj\Debug\all_option.exe
+D:\c#\all_option\all_option\obj\Debug\all_option.pdb
+D:\c#\all_option\all_option\obj\Debug\all_option.csprojResolveAssemblyReference.cache
+D:\c#\all_option\all_option\obj\Debug\all_option.taotk.resources
+D:\Login dep\all_option\all_option\bin\Debug\all_option.exe.config
+D:\Login dep\all_option\all_option\obj\Debug\all_option.exe
+D:\Login dep\all_option\all_option\obj\Debug\all_option.pdb
+D:\Login dep\all_option\all_option\bin\Debug\all_option.exe
+D:\Login dep\all_option\all_option\bin\Debug\all_option.pdb
+D:\Login dep\all_option\all_option\obj\Debug\all_option.csprojResolveAssemblyReference.cache
+D:\Login dep\all_option\all_option\obj\Debug\all_option.login.resources
+D:\Login dep\all_option\all_option\obj\Debug\all_option.Properties.Resources.resources
+D:\Login dep\all_option\all_option\obj\Debug\all_option.taotk.resources
+D:\Login dep\all_option\all_option\obj\Debug\all_option.csproj.GenerateResource.Cache
+D:\Login dep\all_option\all_option\obj\Debug\all_option.them.resources
+D:\Login dep\all_option\all_option\obj\Debug\all_option.quanlytk.resources
+D:\Login dep\all_option\all_option\obj\Debug\all_option.hethong.resources

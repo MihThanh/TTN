@@ -60,7 +60,7 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.but_tim_nv);
             this.panel5.Controls.Add(this.txt_tim_sp);
-            this.panel5.Location = new System.Drawing.Point(12, 292);
+            this.panel5.Location = new System.Drawing.Point(7, 292);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(307, 53);
             this.panel5.TabIndex = 21;
@@ -84,6 +84,7 @@
             this.txt_tim_sp.Name = "txt_tim_sp";
             this.txt_tim_sp.Size = new System.Drawing.Size(174, 20);
             this.txt_tim_sp.TabIndex = 0;
+            this.txt_tim_sp.TextChanged += new System.EventHandler(this.txt_tim_sp_TextChanged);
             // 
             // panel1
             // 
@@ -98,7 +99,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(12, 25);
+            this.panel1.Location = new System.Drawing.Point(7, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(307, 263);
             this.panel1.TabIndex = 22;
@@ -195,14 +196,14 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Location = new System.Drawing.Point(328, 25);
+            this.panel2.Location = new System.Drawing.Point(323, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(513, 320);
+            this.panel2.Size = new System.Drawing.Size(501, 320);
             this.panel2.TabIndex = 23;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(215, 267);
+            this.button3.Location = new System.Drawing.Point(211, 268);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 44);
             this.button3.TabIndex = 17;
@@ -212,7 +213,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(104, 267);
+            this.button1.Location = new System.Drawing.Point(100, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 44);
             this.button1.TabIndex = 18;
@@ -222,15 +223,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(502, 259);
+            this.dataGridView1.Size = new System.Drawing.Size(489, 259);
             this.dataGridView1.TabIndex = 19;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(330, 267);
+            this.button4.Location = new System.Drawing.Point(326, 268);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 44);
             this.button4.TabIndex = 16;
@@ -240,7 +242,7 @@
             // 
             // but_chitiethdn
             // 
-            this.but_chitiethdn.Location = new System.Drawing.Point(17, -1);
+            this.but_chitiethdn.Location = new System.Drawing.Point(13, -1);
             this.but_chitiethdn.Name = "but_chitiethdn";
             this.but_chitiethdn.Size = new System.Drawing.Size(124, 23);
             this.but_chitiethdn.TabIndex = 24;
@@ -258,6 +260,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "user_hdn";
             this.Size = new System.Drawing.Size(841, 348);
+            this.Load += new System.EventHandler(this.user_hdn_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);

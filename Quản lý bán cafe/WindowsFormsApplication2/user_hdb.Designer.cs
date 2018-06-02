@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user_hdb));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_hdb_tien = new System.Windows.Forms.TextBox();
+            this.txt_hdb_makh = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.txt_hdb_ngay = new System.Windows.Forms.TextBox();
             this.txt_hdb_manv = new System.Windows.Forms.TextBox();
             this.txt_hdb_ma = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_hdb_tien = new System.Windows.Forms.TextBox();
-            this.txt_hdb_makh = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.but_tim_nv = new System.Windows.Forms.Button();
-            this.txt_tim_sp = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.but_tim_nv = new System.Windows.Forms.Button();
+            this.txt_tim_sp = new System.Windows.Forms.TextBox();
             this.but_chitiethdb = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,17 +73,39 @@
             this.panel1.Size = new System.Drawing.Size(307, 248);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // txt_hdb_tien
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(327, 32);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 307);
-            this.panel2.TabIndex = 0;
+            this.txt_hdb_tien.Location = new System.Drawing.Point(98, 204);
+            this.txt_hdb_tien.Name = "txt_hdb_tien";
+            this.txt_hdb_tien.Size = new System.Drawing.Size(199, 20);
+            this.txt_hdb_tien.TabIndex = 10;
+            // 
+            // txt_hdb_makh
+            // 
+            this.txt_hdb_makh.Location = new System.Drawing.Point(99, 163);
+            this.txt_hdb_makh.Name = "txt_hdb_makh";
+            this.txt_hdb_makh.Size = new System.Drawing.Size(199, 20);
+            this.txt_hdb_makh.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Thành tiền";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 163);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Khách hàng";
             // 
             // txt_hdb_ngay
             // 
@@ -136,76 +158,17 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Số HĐ Bán";
             // 
-            // txt_hdb_tien
+            // panel2
             // 
-            this.txt_hdb_tien.Location = new System.Drawing.Point(98, 204);
-            this.txt_hdb_tien.Name = "txt_hdb_tien";
-            this.txt_hdb_tien.Size = new System.Drawing.Size(199, 20);
-            this.txt_hdb_tien.TabIndex = 10;
-            // 
-            // txt_hdb_makh
-            // 
-            this.txt_hdb_makh.Location = new System.Drawing.Point(99, 163);
-            this.txt_hdb_makh.Name = "txt_hdb_makh";
-            this.txt_hdb_makh.Size = new System.Drawing.Size(199, 20);
-            this.txt_hdb_makh.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 204);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Thành tiền";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 163);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Khách hàng";
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.but_tim_nv);
-            this.panel5.Controls.Add(this.txt_tim_sp);
-            this.panel5.Location = new System.Drawing.Point(12, 286);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(307, 53);
-            this.panel5.TabIndex = 21;
-            // 
-            // but_tim_nv
-            // 
-            this.but_tim_nv.Image = ((System.Drawing.Image)(resources.GetObject("but_tim_nv.Image")));
-            this.but_tim_nv.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_tim_nv.Location = new System.Drawing.Point(6, 3);
-            this.but_tim_nv.Name = "but_tim_nv";
-            this.but_tim_nv.Size = new System.Drawing.Size(85, 44);
-            this.but_tim_nv.TabIndex = 1;
-            this.but_tim_nv.Text = "Tìm";
-            this.but_tim_nv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.but_tim_nv.UseVisualStyleBackColor = true;
-            // 
-            // txt_tim_sp
-            // 
-            this.txt_tim_sp.Location = new System.Drawing.Point(107, 14);
-            this.txt_tim_sp.Name = "txt_tim_sp";
-            this.txt_tim_sp.Size = new System.Drawing.Size(174, 20);
-            this.txt_tim_sp.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(487, 236);
-            this.dataGridView1.TabIndex = 4;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(327, 32);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(493, 307);
+            this.panel2.TabIndex = 0;
             // 
             // button4
             // 
@@ -237,6 +200,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(487, 236);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.but_tim_nv);
+            this.panel5.Controls.Add(this.txt_tim_sp);
+            this.panel5.Location = new System.Drawing.Point(12, 286);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(307, 53);
+            this.panel5.TabIndex = 21;
+            // 
+            // but_tim_nv
+            // 
+            this.but_tim_nv.Image = ((System.Drawing.Image)(resources.GetObject("but_tim_nv.Image")));
+            this.but_tim_nv.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.but_tim_nv.Location = new System.Drawing.Point(6, 3);
+            this.but_tim_nv.Name = "but_tim_nv";
+            this.but_tim_nv.Size = new System.Drawing.Size(85, 44);
+            this.but_tim_nv.TabIndex = 1;
+            this.but_tim_nv.Text = "Tìm";
+            this.but_tim_nv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.but_tim_nv.UseVisualStyleBackColor = true;
+            // 
+            // txt_tim_sp
+            // 
+            this.txt_tim_sp.Location = new System.Drawing.Point(107, 14);
+            this.txt_tim_sp.Name = "txt_tim_sp";
+            this.txt_tim_sp.Size = new System.Drawing.Size(174, 20);
+            this.txt_tim_sp.TabIndex = 0;
+            this.txt_tim_sp.TextChanged += new System.EventHandler(this.txt_tim_sp_TextChanged);
+            // 
             // but_chitiethdb
             // 
             this.but_chitiethdb.Location = new System.Drawing.Point(16, 1);
@@ -257,12 +259,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "user_hdb";
             this.Size = new System.Drawing.Size(841, 348);
+            this.Load += new System.EventHandler(this.user_hdb_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

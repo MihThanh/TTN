@@ -58,6 +58,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -249,6 +250,7 @@
             this.but_tim_nv.Text = "Tìm";
             this.but_tim_nv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_tim_nv.UseVisualStyleBackColor = true;
+            this.but_tim_nv.Click += new System.EventHandler(this.but_tim_nv_Click);
             // 
             // txt_tim_sp
             // 
@@ -256,6 +258,7 @@
             this.txt_tim_sp.Name = "txt_tim_sp";
             this.txt_tim_sp.Size = new System.Drawing.Size(174, 20);
             this.txt_tim_sp.TabIndex = 0;
+            this.txt_tim_sp.TextChanged += new System.EventHandler(this.txt_tim_sp_TextChanged);
             // 
             // user_nv
             // 
@@ -266,6 +269,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "user_nv";
             this.Size = new System.Drawing.Size(841, 340);
+            this.Load += new System.EventHandler(this.user_nv_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -143,6 +143,11 @@ namespace tv
             }
         }
 
+        private void but_tim_sp_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

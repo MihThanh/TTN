@@ -85,6 +85,7 @@
             this.txt_tim_sp.Name = "txt_tim_sp";
             this.txt_tim_sp.Size = new System.Drawing.Size(174, 20);
             this.txt_tim_sp.TabIndex = 0;
+            this.txt_tim_sp.TextChanged += new System.EventHandler(this.txt_tim_sp_TextChanged);
             // 
             // panel2
             // 
@@ -130,6 +131,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -270,6 +272,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "user_sp";
             this.Size = new System.Drawing.Size(841, 348);
+            this.Load += new System.EventHandler(this.user_sp_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);

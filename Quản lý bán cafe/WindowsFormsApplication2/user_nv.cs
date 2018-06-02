@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM nhanvien";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO nhanvien(manv ,tennv,diachi ,gioitinh ,ns ,sdt ) VALUES ('" + txt_nv_ma.Text + "',N'" + txt_nv_ten.Text + "',N'" + txt_nv_dc.Text + "',N'" + txt_nv_gt.Text + "','" + txt_nv_ns.Text + "','" + txt_nv_ns.Text + "','" + txt_nv_dt.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -85,7 +85,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update nhanvien set tennv=N'" + txt_nv_ten.Text + "',diachi=N'" + txt_nv_dc + "' ,gioitinh=N'" + txt_nv_gt + "' ,ns='" + txt_nv_ns.Text + "' ,sdt='" + txt_nv_dt.Text + "' where manv = '" + txt_nv_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete nhanvien where manv='" + txt_nv_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -120,6 +120,29 @@ namespace WindowsFormsApplication2
             {
                 MessageBox.Show("Không sửa được! Hãy thử lại.");
             }
+        }
+
+        private void user_nv_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_tim_sp_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
+            con.Open();
+            string timkiem = "select * from nhanvien where manv LIKE '%" + txt_tim_sp.Text + "%'";
+            SqlCommand com_tim = new SqlCommand(timkiem, con);
+            SqlDataAdapter data = new SqlDataAdapter(com_tim);
+            DataTable table = new DataTable();
+            data.Fill(table);
+            con.Close();
+            dataGridView1.DataSource = table;
+        }
+
+        private void but_tim_nv_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

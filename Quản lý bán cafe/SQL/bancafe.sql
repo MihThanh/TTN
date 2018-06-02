@@ -1,5 +1,5 @@
-﻿create database bancafe
-use bancafe
+﻿create database bancafe1
+use bancafe1
 
 create table nhacc(
 mancc nvarchar(10) primary key,

@@ -83,6 +83,7 @@
             this.but_tim_sp.Text = "Tìm";
             this.but_tim_sp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_tim_sp.UseVisualStyleBackColor = true;
+            this.but_tim_sp.Click += new System.EventHandler(this.but_tim_sp_Click);
             // 
             // txt_tim_sp
             // 

@@ -72,24 +72,6 @@
     <Compile Include="dangnhap.Designer.cs">
       <DependentUpon>dangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="HDB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HDB.Designer.cs">
-      <DependentUpon>HDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HDN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HDN.Designer.cs">
-      <DependentUpon>HDN.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KH.Designer.cs">
-      <DependentUpon>KH.cs</DependentUpon>
-    </Compile>
     <Compile Include="LOAI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +97,6 @@
     </Compile>
     <Compile Include="qltk.Designer.cs">
       <DependentUpon>qltk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SP.Designer.cs">
-      <DependentUpon>SP.cs</DependentUpon>
     </Compile>
     <Compile Include="tao_tk.cs">
       <SubType>Form</SubType>
@@ -188,15 +164,6 @@
     <EmbeddedResource Include="dangnhap.resx">
       <DependentUpon>dangnhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HDB.resx">
-      <DependentUpon>HDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HDN.resx">
-      <DependentUpon>HDN.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KH.resx">
-      <DependentUpon>KH.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LOAI.resx">
       <DependentUpon>LOAI.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,9 +185,6 @@
     </Compile>
     <EmbeddedResource Include="qltk.resx">
       <DependentUpon>qltk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SP.resx">
-      <DependentUpon>SP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tao_tk.resx">
       <DependentUpon>tao_tk.cs</DependentUpon>

@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM hoadonnhap";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO hoadonnhap(mahdn ,ngaynhap ,tongtien ,manv ,mancc) VALUES ('" + txt_hdn_ma.Text + "','" + txt_hdn_ngay.Text + "','" + txt_hdn_tien + "','" + txt_hdn_manv.Text + "','" + txt_hdn_mancc.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -84,7 +84,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update hoadonnhap set manv = N'" + txt_hdn_manv.Text + "',mancc = '" + txt_hdn_mancc.Text + "',ngayban = '" + txt_hdn_ngay.Text + ",tongtien='" + txt_hdn_tien.Text + "' where manhdn = '" + txt_hdn_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -105,7 +105,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete hoadonnhap where mahbn='" + txt_hdn_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -130,6 +130,24 @@ namespace WindowsFormsApplication2
         private void but_tim_nv_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void user_hdn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_tim_sp_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
+            con.Open();
+            string timkiem = "select * from hoadonnhap where mahdn LIKE '%" + txt_tim_sp.Text + "%'";
+            SqlCommand com_tim = new SqlCommand(timkiem, con);
+            SqlDataAdapter data = new SqlDataAdapter(com_tim);
+            DataTable table = new DataTable();
+            data.Fill(table);
+            con.Close();
+            dataGridView1.DataSource = table;
         }
     }
 }

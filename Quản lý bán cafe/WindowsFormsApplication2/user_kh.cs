@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM khachhang";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -54,14 +54,16 @@ namespace WindowsFormsApplication2
         {
             txt_kh_ma.DataBindings.Add("Text", dataGridView1.DataSource, "makh");
             txt_kh_ten.DataBindings.Add("Text", dataGridView1.DataSource, "tenkh");
-
+            txt_diachi.DataBindings.Add("Text", dataGridView1.DataSource, "diachi");
+            date_ns.DataBindings.Add("Text", dataGridView1.DataSource, "ngaysinh");
+            txt_sdt.DataBindings.Add("Text", dataGridView1.DataSource, "sdt");
         }
 
         private void but_them_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO khachhang(makh,tenkh) VALUES('" + txt_kh_ma.Text + "',N'" + txt_kh_ten.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -83,7 +85,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update khachhang set  tenkh='" + txt_kh_ten.Text + "'  where makh ='" + txt_kh_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -104,7 +106,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete khachhang where makh='" + txt_kh_ma.Text + "' ";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -130,6 +132,29 @@ namespace WindowsFormsApplication2
         {
             TKEKH f1 = new TKEKH();
             f1.Show();
+        }
+
+        private void user_kh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_tim_sp_TextChanged(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
+            con.Open();
+            string timkiem = "select * from khachhang where makh LIKE '%" + txt_tim_sp.Text + "%'";
+            SqlCommand com_tim = new SqlCommand(timkiem, con);
+            SqlDataAdapter data = new SqlDataAdapter(com_tim);
+            DataTable table = new DataTable();
+            data.Fill(table);
+            con.Close();
+            dataGridView1.DataSource = table;
         }
     }
 }

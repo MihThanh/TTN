@@ -41,7 +41,7 @@ namespace tv
         private void but_thongke_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
             con.Open();
             string sql_sp = "select * from HOADONBAN where NGAYXUAT between '" + date_first.Text + "' and '" + date_last.Text + "'";
             SqlCommand com = new SqlCommand(sql_sp, con);

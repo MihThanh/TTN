@@ -52,7 +52,7 @@ namespace all_option
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=TAIKHOAN;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
                 con.Open();
                 string sua = "UPDATE ACCOUNT SET MATKHAU = '"+txt_mkmoi.Text+"' WHERE TAIKHOAN = '"+txt_tk.Text+"'";
                 SqlCommand com = new SqlCommand(sua, con);

@@ -39,9 +39,9 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
-                string sql_sp = "exec xemsp";
+                string sql_sp = "select * from NHANVIEN";
                 SqlCommand com = new SqlCommand(sql_sp, con);
                 SqlDataAdapter data = new SqlDataAdapter(com);
                 DataTable table = new DataTable();
@@ -68,7 +68,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string them = "EXEC Themsp @ma='" + txt_masp.Text + "',@ten=N'" + txt_tensp.Text + "',@gia='" + txt_gia.Text + "',@mansx='"+ txt_mansx.Text +"'";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -86,7 +86,7 @@ namespace tv
 
         private void txt_tim_sp_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
             con.Open();
             string timkiem = "select * from SANPHAM where MASP LIKE '%" + txt_tim_sp.Text + "%'";
             SqlCommand com_tim = new SqlCommand(timkiem, con);
@@ -101,7 +101,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string xoa = "delete SANPHAM where MASP = '" + txt_masp.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -115,7 +115,7 @@ namespace tv
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }
@@ -124,7 +124,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string sua = "update sanpham set tensp = N'"+ txt_tensp.Text +"', gia ='"+ txt_gia.Text +"', mansx = '"+ txt_mansx.Text +"', ngaynhap = '"+ date_ngaynhap.Text +"' where masp = '"+ txt_masp.Text +"'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -138,7 +138,7 @@ namespace tv
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }

@@ -21,3 +21,16 @@ D:\Login dep\all_option\all_option\obj\Debug\all_option.csproj.GenerateResource.
 D:\Login dep\all_option\all_option\obj\Debug\all_option.them.resources
 D:\Login dep\all_option\all_option\obj\Debug\all_option.quanlytk.resources
 D:\Login dep\all_option\all_option\obj\Debug\all_option.hethong.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\bin\Debug\all_option.exe.config
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.exe
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.pdb
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\bin\Debug\all_option.exe
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\bin\Debug\all_option.pdb
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.hethong.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.login.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.Properties.Resources.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.quanlytk.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.taotk.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.them.resources
+C:\Users\Admin\Documents\TTN\Quản lý nhân sự\Quản lý nhân sự\obj\Debug\all_option.csproj.GenerateResource.Cache

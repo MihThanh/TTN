@@ -22,7 +22,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string them = "EXEC Them_ncc @ma='"+ txt_ma.Text +"',@ten='"+ txt_ten.Text +"',@diachi='"+ txt_diachi.Text +"',@sdt='"+ txt_dienthoai.Text +"'";
                 SqlCommand com_them = new SqlCommand(them, con);

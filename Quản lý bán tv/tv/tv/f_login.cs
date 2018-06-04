@@ -22,7 +22,7 @@ namespace tv
 
         private void but_dn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=TAIKHOAN;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
             try
             {
                 con.Open();

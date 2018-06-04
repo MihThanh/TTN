@@ -148,6 +148,7 @@
             this.but_them.Text = "Thêm";
             this.but_them.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_them.UseVisualStyleBackColor = true;
+            this.but_them.Click += new System.EventHandler(this.but_them_Click);
             // 
             // listView2
             // 

@@ -20,7 +20,7 @@ namespace all_option
 
         private void but_dn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=account;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
             try
             {
                 con.Open();

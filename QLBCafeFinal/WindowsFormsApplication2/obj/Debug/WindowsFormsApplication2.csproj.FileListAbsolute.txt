@@ -137,3 +137,6 @@ C:\Users\Admin\Desktop\nam_sua\WindowsFormsApplication2\obj\Debug\WindowsFormsAp
 C:\Users\Admin\Desktop\nam_sua\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.user_nv.resources
 C:\Users\Admin\Desktop\nam_sua\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.user_sp.resources
 C:\Users\Admin\Desktop\nam_sua\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\TTN\QLBCafeFinal\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Admin\Documents\TTN\QLBCafeFinal\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Admin\Documents\TTN\QLBCafeFinal\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb

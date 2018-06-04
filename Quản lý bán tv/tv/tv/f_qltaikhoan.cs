@@ -31,7 +31,7 @@ namespace tv
             {
                 try
                 {
-                    SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=TAIKHOAN;Integrated Security=True");
+                    SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
                     con.Open();
                     string sua = "UPDATE ACCOUNT SET MATKHAU = '" + txt_mkmoi.Text + "' WHERE TAIKHOAN = '" + txt_tk.Text + "'";
                     SqlCommand com = new SqlCommand(sua, con);
@@ -53,7 +53,7 @@ namespace tv
 
         private void ketnoi()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=TAIKHOAN;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
             con.Open();
             string sql = "SELECT * FROM ACCOUNT";
             SqlCommand com = new SqlCommand(sql, con);

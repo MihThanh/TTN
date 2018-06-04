@@ -81,7 +81,7 @@ namespace all_option
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
                 con.Open();
                 string sua = "UPDATE dbo.NHANVIEN SET HOTEN = N'" + txt_hoten.Text + "',MANV = '" + txt_manv.Text + "',GT = N'" + com_gt.Text + "',MAPB = '" + txt_mapb.Text + "',NS = '" + date_ns.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -94,7 +94,7 @@ namespace all_option
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
                 con.Close();
             }
         }
@@ -103,7 +103,7 @@ namespace all_option
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
                 con.Open();
                 string xoa = "DELETE dbo.NHANVIEN WHERE MANV = '" + txt_manv.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -116,7 +116,7 @@ namespace all_option
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
                 con.Close();
             }
         }

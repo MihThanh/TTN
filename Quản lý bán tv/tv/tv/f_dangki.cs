@@ -22,7 +22,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=TAIKHOAN;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
                 con.Open();
                 string them = ("INSERT INTO ACCOUNT(TAIKHOAN, MATKHAU, TENHIENTHI) VALUES(N'" + txt_tao_tk.Text + "', '" + txt_tao_mk.Text + "', N'" + txt_tenhienthi.Text + "')");
                 SqlCommand com = new SqlCommand(them, con);

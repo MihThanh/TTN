@@ -54,5 +54,10 @@ namespace tv
         {
 
         }
+
+        private void but_them_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

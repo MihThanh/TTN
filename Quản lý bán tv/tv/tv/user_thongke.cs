@@ -40,18 +40,31 @@ namespace tv
         }
         private void but_thongke_Click(object sender, EventArgs e)
         {
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
+                con.Open();
+                string sql_sp = "select HOADONBAN.MAHDBAN, NHANVIEN.HOTEN, KHACHHANG.TENKH, SANPHAM.TENSP,soluong, gtban from HOADONBAN, NHANVIEN, KHACHHANG, SANPHAM where HOADONBAN.MANV = NHANVIEN.MANV and HOADONBAN.MAKH = KHACHHANG.MAKH and HOADONBAN.MASP = SANPHAM.MASP and NGAYXUAT between '"+date_first.Text+"' and '"+date_last.Text+"' ";
+                SqlCommand com = new SqlCommand(sql_sp, con);
+                com.ExecuteNonQuery();
+                SqlCommand coma = new SqlCommand(sql_sp, con);
+                SqlDataAdapter data = new SqlDataAdapter(coma);
+                DataTable table = new DataTable();
+                data.Fill(table);
+                con.Close();
+                data_thongke.DataSource = table;
+            }
+            catch (Exception)
+            {
 
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
-            con.Open();
-            string sql_sp = "select * from HOADONBAN where NGAYXUAT between '" + date_first.Text + "' and '" + date_last.Text + "'";
-            SqlCommand com = new SqlCommand(sql_sp, con);
-            com.ExecuteNonQuery();
-            SqlCommand coma = new SqlCommand(sql_sp, con);
-            SqlDataAdapter data = new SqlDataAdapter(coma);
-            DataTable table = new DataTable();
-            data.Fill(table);
-            con.Close();
-            data_thongke.DataSource = table;
+                MessageBox.Show("Không tìm thấy hóa đơn", "Thông báo");
+            }
+        }
+
+        private void but_suahd_Click(object sender, EventArgs e)
+        {
+            f_hdb f1 = new f_hdb();
+            f1.Show();
         }
     }
 }

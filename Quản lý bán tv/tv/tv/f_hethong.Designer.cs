@@ -29,33 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f_hethong));
-            this.but_thanhtoan = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tool_thongtin = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel = new System.Windows.Forms.Panel();
+            this.but_thanhtoan = new System.Windows.Forms.Button();
             this.but_thongke = new System.Windows.Forms.Button();
             this.but_sanpham = new System.Windows.Forms.Button();
-            this.panel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.but_nhanvien = new System.Windows.Forms.Button();
+            this.but_kh = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // but_thanhtoan
-            // 
-            this.but_thanhtoan.Image = ((System.Drawing.Image)(resources.GetObject("but_thanhtoan.Image")));
-            this.but_thanhtoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_thanhtoan.Location = new System.Drawing.Point(37, 37);
-            this.but_thanhtoan.Name = "but_thanhtoan";
-            this.but_thanhtoan.Size = new System.Drawing.Size(105, 58);
-            this.but_thanhtoan.TabIndex = 0;
-            this.but_thanhtoan.Text = "Thanh toán";
-            this.but_thanhtoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.but_thanhtoan.UseVisualStyleBackColor = true;
-            this.but_thanhtoan.Click += new System.EventHandler(this.but_thanhtoan_Click);
             // 
             // menuStrip1
             // 
@@ -105,11 +93,31 @@
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
+            // panel
+            // 
+            this.panel.Location = new System.Drawing.Point(12, 113);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(786, 468);
+            this.panel.TabIndex = 3;
+            // 
+            // but_thanhtoan
+            // 
+            this.but_thanhtoan.Image = ((System.Drawing.Image)(resources.GetObject("but_thanhtoan.Image")));
+            this.but_thanhtoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.but_thanhtoan.Location = new System.Drawing.Point(33, 37);
+            this.but_thanhtoan.Name = "but_thanhtoan";
+            this.but_thanhtoan.Size = new System.Drawing.Size(105, 58);
+            this.but_thanhtoan.TabIndex = 0;
+            this.but_thanhtoan.Text = "Thanh toán";
+            this.but_thanhtoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.but_thanhtoan.UseVisualStyleBackColor = true;
+            this.but_thanhtoan.Click += new System.EventHandler(this.but_thanhtoan_Click);
+            // 
             // but_thongke
             // 
             this.but_thongke.Image = ((System.Drawing.Image)(resources.GetObject("but_thongke.Image")));
             this.but_thongke.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_thongke.Location = new System.Drawing.Point(192, 37);
+            this.but_thongke.Location = new System.Drawing.Point(159, 37);
             this.but_thongke.Name = "but_thongke";
             this.but_thongke.Size = new System.Drawing.Size(105, 58);
             this.but_thongke.TabIndex = 1;
@@ -122,7 +130,7 @@
             // 
             this.but_sanpham.Image = ((System.Drawing.Image)(resources.GetObject("but_sanpham.Image")));
             this.but_sanpham.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_sanpham.Location = new System.Drawing.Point(346, 37);
+            this.but_sanpham.Location = new System.Drawing.Point(289, 37);
             this.but_sanpham.Name = "but_sanpham";
             this.but_sanpham.Size = new System.Drawing.Size(105, 58);
             this.but_sanpham.TabIndex = 2;
@@ -130,18 +138,11 @@
             this.but_sanpham.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.but_sanpham.Click += new System.EventHandler(this.but_sanpham_Click);
             // 
-            // panel
-            // 
-            this.panel.Location = new System.Drawing.Point(12, 113);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(786, 435);
-            this.panel.TabIndex = 3;
-            // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(514, 37);
+            this.button1.Location = new System.Drawing.Point(424, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 58);
             this.button1.TabIndex = 3;
@@ -154,7 +155,7 @@
             // 
             this.but_nhanvien.Image = ((System.Drawing.Image)(resources.GetObject("but_nhanvien.Image")));
             this.but_nhanvien.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.but_nhanvien.Location = new System.Drawing.Point(663, 37);
+            this.but_nhanvien.Location = new System.Drawing.Point(553, 37);
             this.but_nhanvien.Name = "but_nhanvien";
             this.but_nhanvien.Size = new System.Drawing.Size(105, 58);
             this.but_nhanvien.TabIndex = 4;
@@ -163,11 +164,25 @@
             this.but_nhanvien.UseVisualStyleBackColor = true;
             this.but_nhanvien.Click += new System.EventHandler(this.but_nhanvien_Click);
             // 
+            // but_kh
+            // 
+            this.but_kh.Image = ((System.Drawing.Image)(resources.GetObject("but_kh.Image")));
+            this.but_kh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.but_kh.Location = new System.Drawing.Point(679, 37);
+            this.but_kh.Name = "but_kh";
+            this.but_kh.Size = new System.Drawing.Size(105, 58);
+            this.but_kh.TabIndex = 5;
+            this.but_kh.Text = "Khách hàng";
+            this.but_kh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.but_kh.UseVisualStyleBackColor = true;
+            this.but_kh.Click += new System.EventHandler(this.but_kh_Click);
+            // 
             // f_hethong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 560);
+            this.ClientSize = new System.Drawing.Size(809, 593);
+            this.Controls.Add(this.but_kh);
             this.Controls.Add(this.but_nhanvien);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel);
@@ -188,18 +203,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button but_thanhtoan;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tool_thongtin;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button but_thanhtoan;
         private System.Windows.Forms.Button but_thongke;
         private System.Windows.Forms.Button but_sanpham;
-        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button but_nhanvien;
+        private System.Windows.Forms.Button but_kh;
     }
 }
 

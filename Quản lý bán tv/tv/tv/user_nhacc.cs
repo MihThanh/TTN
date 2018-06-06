@@ -33,9 +33,9 @@ namespace tv
 
         void ketnoi()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
             con.Open();
-            string sql_sp = "select * from NHACC";
+            string sql_sp = "exec xem_nhacc";
             SqlCommand com = new SqlCommand(sql_sp, con);
             SqlDataAdapter data = new SqlDataAdapter(com);
             DataTable table = new DataTable();
@@ -53,12 +53,9 @@ namespace tv
 
         private void but_them_sp_Click(object sender, EventArgs e)
         {
-            //f_themncc f1 = new f_themncc();
-            //f1.Show();
-
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string them = "EXEC Them_ncc @ma='" + txt_masncc.Text + "',@ten='" + txt_tenncc.Text + "',@diachi='" + txt_diachi.Text + "',@sdt='" + txt_sdt.Text + "'";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -79,7 +76,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string xoa = "EXEC Sua_ncc @ma='" + txt_masncc + "',@ten='" + txt_tenncc + "',@diachi='" + txt_diachi + "',@sdt='" + txt_sdt +"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -89,11 +86,11 @@ namespace tv
             }
             catch (Exception)
             {
-                MessageBox.Show("Không xóa được, hãy thử lại!");
+                MessageBox.Show("Không sửa được, hãy thử lại!");
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }
@@ -102,7 +99,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string xoa = "delete NHACC where MANCC = '"+ txt_masncc.Text +"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -116,14 +113,14 @@ namespace tv
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }
 
         private void but_tim_sp_Click(object sender, EventArgs e)
         {
-             SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+             SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
              con.Open();
              string timkiem = "select * from NHACC where MANCC LIKE '%"+ txt_tim_ncc.Text +"%'";
              SqlCommand com_xoa = new SqlCommand(timkiem, con);
@@ -137,9 +134,9 @@ namespace tv
 
         private void txt_tim_ncc_TextChanged(object sender, EventArgs e)
         {
-              SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+              SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
               con.Open();
-              string timkiem = "select * from NHACC where TENNCC LIKE N'%" + txt_tim_ncc.Text + "%'";
+              string timkiem = "select * from NHACC where MANCC LIKE '%" + txt_tim_ncc.Text + "%'";
               SqlCommand com_xoa = new SqlCommand(timkiem, con);
               SqlDataAdapter data = new SqlDataAdapter(com_xoa);
               DataTable table = new DataTable();
@@ -147,5 +144,10 @@ namespace tv
               con.Close();
               data_nhacc.DataSource = table;
             }
+
+        private void user_nhacc_Load(object sender, EventArgs e)
+        {
+
+        }
         }
     }

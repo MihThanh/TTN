@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM nhanvien";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "insert into nhanvien(manv,tennv,diachi,gioitinh,ns,sdt) values('"+txt_nv_ma.Text+"', N'"+txt_nv_ten.Text+"', N'"+txt_nv_dc.Text+"', N'"+txt_nv_gt.Text+"', '"+txt_nv_ns.Text+"', '"+txt_nv_dt.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -84,7 +84,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update nhanvien set tennv=N'" + txt_nv_ten.Text + "',diachi=N'" + txt_nv_dc.Text + "' ,gioitinh=N'" + txt_nv_gt.Text + "' ,ns='" + txt_nv_ns.Text + "' ,sdt='" + txt_nv_dt.Text + "' where manv = '" + txt_nv_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete nhanvien where manv='" + txt_nv_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

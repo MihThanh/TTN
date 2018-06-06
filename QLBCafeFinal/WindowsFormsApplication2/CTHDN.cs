@@ -25,7 +25,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM ct_hoadonnhap";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO ct_hoadonnhap (mahdn ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdn_ma.Text + "','" + txt_cthdn_masp.Text + "'," + txt_cthdn_sl.Text + "," + txt_cthdn_tt.Text + "," + txt_cthdn_dg.Text + ")";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update ct_hoadonnhap set  soluong=" + txt_cthdn_sl.Text + ",thanhtien=" + txt_cthdn_tt.Text + " ,dongia=" + txt_cthdn_dg.Text + " where manhdn = '" + txt_cthdn_ma.Text + "' and masp='" + txt_cthdn_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -95,7 +95,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete ct_hoadonnhap where mahbb='" + txt_cthdn_ma.Text + "' and masp='"+txt_cthdn_masp.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

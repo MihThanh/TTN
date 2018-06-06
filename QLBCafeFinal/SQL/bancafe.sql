@@ -111,3 +111,41 @@ insert into hoadonban(mahdb,makh,manv,ngayban,tongtien)
 values('HDB1','KH2','NV1','20180506',30000)
 insert into hoadonnhap(mahdn,mancc,manv,ngaynhap,tongtien)
 values('HDN1','NCC1','NV2','20180403',10000000)
+
+create proc Tinh_Tien_HDB(@ma varchar(15))
+as
+declare @tongtien float
+begin
+	begin 
+	select @tongtien=sum(thanhtien)
+	from ct_hoadonban
+	where mahdb=@ma
+	group by mahdb
+	end
+	begin
+	update hoadonban
+	set tongtien=@tongtien
+	where mahdb=@ma
+	end
+end
+
+create proc Tinh_Tien_HDN(@ma varchar(15))
+as
+declare @tongtien float
+begin
+	begin 
+	select @tongtien=sum(thanhtien)
+	from ct_hoadonnhap
+	where mahdn=@ma
+	group by mahdn
+	end
+	begin
+	update hoadonnhap
+	set tongtien=@tongtien
+	where mahdn=@ma
+	end
+end
+
+select * from HOADONBAN where ngayban BETWEEN '20180403' AND '20180506'
+
+select * from hoadonban

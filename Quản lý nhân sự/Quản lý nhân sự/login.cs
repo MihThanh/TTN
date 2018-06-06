@@ -13,6 +13,7 @@ namespace all_option
 {
     public partial class login : Form
     {
+        public event loginsucces loginsucces = null;
         public login()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace all_option
 
         private void but_dn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=TAIKHOAN;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=TAIKHOAN;Integrated Security=True");
             try
             {
                 con.Open();
@@ -29,26 +30,25 @@ namespace all_option
                 SqlDataReader data = com.ExecuteReader();
                 if (data.Read() == true)
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
+                    MessageBox.Show("Đăng nhập thành công!", "Thông báo");
+                    if (loginsucces != null)
+                    {
+                        loginsucces(this, new dangnhap { Username = txt_tk.Text, Pass = txt_mk.Text });
+                    }
                     hethong f2 = new hethong();
                     this.Hide();
                     f2.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại!"); 
+                    MessageBox.Show("Đăng nhập thất bại!", "Thông báo");
                 }
             }
             catch (Exception)
             {
-                
-                MessageBox.Show("Kết nổi thất bại!");
-            }
-        }
 
-        private void txt_mk_Click(object sender, EventArgs e)
-        {
-            txt_mk.UseSystemPasswordChar = true;
+                MessageBox.Show("Kết nổi thất bại!", "Thông báo");
+            }
         }
 
         private void link_taotk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -57,14 +57,5 @@ namespace all_option
             tk.Show();
         }
 
-        private void txt_tk_Click(object sender, EventArgs e)
-        {
-            txt_tk.Text = "";
-        }
-
-        private void txt_mk_Click_1(object sender, EventArgs e)
-        {
-            txt_mk.Text = "";
-        }
     }
 }

@@ -87,6 +87,8 @@
             // 
             // date_ns
             // 
+            this.date_ns.CustomFormat = "MM/dd/yyyy";
+            this.date_ns.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.date_ns.Location = new System.Drawing.Point(106, 98);
             this.date_ns.Name = "date_ns";
             this.date_ns.Size = new System.Drawing.Size(212, 20);

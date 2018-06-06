@@ -16,7 +16,7 @@ namespace tv
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new f_hethong());
+            Application.Run(new f_login());
         }
     }
 }

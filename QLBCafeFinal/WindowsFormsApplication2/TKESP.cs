@@ -20,7 +20,7 @@ namespace WindowsFormsApplication2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
             con.Open();
             string sql_sp = "select ct_hoadonban.masp,sum(ct_hoadonban.soluong) as SL from hoadonban inner join ct_hoadonban on hoadonban.mahdb=ct_hoadonban.mahdb where hoadonban.ngayban between '" + d1.Text + "' and '" + d2.Text + "' group by ct_hoadonban.masp";
             SqlCommand com = new SqlCommand(sql_sp, con);

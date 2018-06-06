@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM hoadonban";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO hoadonban (mahdb,ngayban,tongtien ,manv,makh) VALUES ('" + txt_hdb_ma.Text + "','" + txt_hdb_ngay.Text + "'," + txt_hdb_tien.Text + ",'" + txt_hdb_manv.Text + "','" + txt_hdb_makh.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update hoadonban set manv = '" + txt_hdb_manv.Text + "',makh = '" + txt_hdb_makh.Text + "',ngayban = '" + txt_hdb_ngay.Text + "',tongtien= " + txt_hdb_tien.Text + " where mahdb = '" + txt_hdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete hoadonban where mahdb='" + txt_hdb_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "exec Tinh_Tien_HDB @ma='" + txt_hdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);

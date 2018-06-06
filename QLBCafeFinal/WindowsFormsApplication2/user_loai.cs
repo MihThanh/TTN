@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM loai";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO loai (maloai,tenloai) VALUES ('" + txt_loai_ma.Text + "',N'" + txt_loai_ten.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -87,7 +87,7 @@ namespace WindowsFormsApplication2
 
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update loai set tenloai=N'" + txt_loai_ten.Text + "' where maloai = '" + txt_loai_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication2
 
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete loai where maloai='" + txt_loai_ma.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

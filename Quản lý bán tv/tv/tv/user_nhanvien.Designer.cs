@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(user_nhanvien));
             this.but_sua_nv = new System.Windows.Forms.Button();
             this.data_nv = new System.Windows.Forms.DataGridView();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.but_them_nv = new System.Windows.Forms.Button();
             this.date_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@
             this.but_tim_nv = new System.Windows.Forms.Button();
             this.txt_tim_nv = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_nv)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -83,6 +83,30 @@
             this.data_nv.Size = new System.Drawing.Size(504, 332);
             this.data_nv.TabIndex = 0;
             // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "Mã nhân viên";
+            this.MANV.Name = "MANV";
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.HeaderText = "Tên nhân viên";
+            this.HOTEN.Name = "HOTEN";
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "sdt";
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.DataPropertyName = "NGAYSINH";
+            this.NGAYSINH.HeaderText = "Ngày sinh";
+            this.NGAYSINH.Name = "NGAYSINH";
+            // 
             // but_them_nv
             // 
             this.but_them_nv.Image = ((System.Drawing.Image)(resources.GetObject("but_them_nv.Image")));
@@ -98,16 +122,18 @@
             // 
             // date_ngaysinh
             // 
-            this.date_ngaysinh.Location = new System.Drawing.Point(100, 244);
+            this.date_ngaysinh.CustomFormat = "MM/dd/yyyy";
+            this.date_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date_ngaysinh.Location = new System.Drawing.Point(106, 244);
             this.date_ngaysinh.Name = "date_ngaysinh";
-            this.date_ngaysinh.Size = new System.Drawing.Size(183, 20);
+            this.date_ngaysinh.Size = new System.Drawing.Size(165, 20);
             this.date_ngaysinh.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 244);
+            this.label10.Location = new System.Drawing.Point(23, 244);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 16);
             this.label10.TabIndex = 0;
@@ -115,16 +141,16 @@
             // 
             // txt_sdt
             // 
-            this.txt_sdt.Location = new System.Drawing.Point(100, 180);
+            this.txt_sdt.Location = new System.Drawing.Point(106, 180);
             this.txt_sdt.Name = "txt_sdt";
-            this.txt_sdt.Size = new System.Drawing.Size(183, 20);
+            this.txt_sdt.Size = new System.Drawing.Size(165, 20);
             this.txt_sdt.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 181);
+            this.label8.Location = new System.Drawing.Point(16, 181);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 16);
             this.label8.TabIndex = 0;
@@ -132,16 +158,16 @@
             // 
             // txt_tennv
             // 
-            this.txt_tennv.Location = new System.Drawing.Point(100, 117);
+            this.txt_tennv.Location = new System.Drawing.Point(106, 117);
             this.txt_tennv.Name = "txt_tennv";
-            this.txt_tennv.Size = new System.Drawing.Size(183, 20);
+            this.txt_tennv.Size = new System.Drawing.Size(165, 20);
             this.txt_tennv.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 119);
+            this.label6.Location = new System.Drawing.Point(8, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 16);
             this.label6.TabIndex = 0;
@@ -174,16 +200,16 @@
             // 
             // txt_manv
             // 
-            this.txt_manv.Location = new System.Drawing.Point(101, 54);
+            this.txt_manv.Location = new System.Drawing.Point(107, 54);
             this.txt_manv.Name = "txt_manv";
-            this.txt_manv.Size = new System.Drawing.Size(183, 20);
+            this.txt_manv.Size = new System.Drawing.Size(165, 20);
             this.txt_manv.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 57);
+            this.label5.Location = new System.Drawing.Point(11, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 0;
@@ -191,6 +217,7 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.date_ngaysinh);
             this.panel7.Controls.Add(this.label10);
@@ -234,30 +261,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(293, 50);
             this.panel5.TabIndex = 4;
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "Mã nhân viên";
-            this.MANV.Name = "MANV";
-            // 
-            // HOTEN
-            // 
-            this.HOTEN.DataPropertyName = "HOTEN";
-            this.HOTEN.HeaderText = "Tên nhân viên";
-            this.HOTEN.Name = "HOTEN";
-            // 
-            // sdt
-            // 
-            this.sdt.DataPropertyName = "sdt";
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            // 
-            // NGAYSINH
-            // 
-            this.NGAYSINH.DataPropertyName = "NGAYSINH";
-            this.NGAYSINH.HeaderText = "Ngày sinh";
-            this.NGAYSINH.Name = "NGAYSINH";
             // 
             // user_nhanvien
             // 

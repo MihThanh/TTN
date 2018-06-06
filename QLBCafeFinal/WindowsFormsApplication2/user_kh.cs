@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM khachhang";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO khachhang(makh,tenkh) VALUES('" + txt_kh_ma.Text + "',N'" + txt_kh_ten.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update khachhang set  tenkh=N'" + txt_kh_ten.Text + "'  where makh ='" + txt_kh_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete khachhang where makh='" + txt_kh_ma.Text + "' ";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

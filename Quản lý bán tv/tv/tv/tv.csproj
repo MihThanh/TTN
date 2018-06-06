@@ -51,6 +51,18 @@
     <Compile Include="f_dangki.Designer.cs">
       <DependentUpon>f_dangki.cs</DependentUpon>
     </Compile>
+    <Compile Include="f_hdb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_hdb.Designer.cs">
+      <DependentUpon>f_hdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="f_hdn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_hdn.Designer.cs">
+      <DependentUpon>f_hdn.cs</DependentUpon>
+    </Compile>
     <Compile Include="f_hethong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="them_kh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="them_kh.Designer.cs">
+      <DependentUpon>them_kh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_kh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_kh.Designer.cs">
+      <DependentUpon>user_kh.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_nhacc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +134,12 @@
     <EmbeddedResource Include="f_dangki.resx">
       <DependentUpon>f_dangki.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="f_hdb.resx">
+      <DependentUpon>f_hdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_hdn.resx">
+      <DependentUpon>f_hdn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="f_hethong.resx">
       <DependentUpon>f_hethong.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +161,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="them_kh.resx">
+      <DependentUpon>them_kh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_kh.resx">
+      <DependentUpon>user_kh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user_nhacc.resx">
       <DependentUpon>user_nhacc.cs</DependentUpon>
     </EmbeddedResource>

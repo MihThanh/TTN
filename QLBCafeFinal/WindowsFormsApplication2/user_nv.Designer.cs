@@ -207,10 +207,12 @@
             // txt_nv_ns
             // 
             this.txt_nv_ns.CustomFormat = "MM/dd/yyyy";
+            this.txt_nv_ns.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txt_nv_ns.Location = new System.Drawing.Point(76, 147);
             this.txt_nv_ns.Name = "txt_nv_ns";
             this.txt_nv_ns.Size = new System.Drawing.Size(213, 20);
             this.txt_nv_ns.TabIndex = 16;
+            this.txt_nv_ns.Value = new System.DateTime(2018, 6, 4, 0, 0, 0, 0);
             // 
             // panel2
             // 

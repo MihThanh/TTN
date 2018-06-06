@@ -37,13 +37,15 @@ namespace all_option
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=THANH-PC\THANH;Initial Catalog=QUANLYNHANSU;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO dbo.NHANVIEN (HOTEN, MANV,GT,MAPB,NS, LUONG, MANGS) VALUES (N'" + txt_hoten.Text + "','" + txt_manv.Text + "',N'" + com_gt.Text + "','" + txt_mapb.Text + "','" + date_ns.Text + "', '"+txt_luong.Text+"', '"+txt_mangs.Text+"')";
                 SqlCommand com_them = new SqlCommand(them, con);
                 com_them.ExecuteNonQuery();
+                com_them.Dispose();
                 con.Close();
                 MessageBox.Show("Đã thêm thành công!");
+                this.Close();
             }
             catch (Exception)
             {

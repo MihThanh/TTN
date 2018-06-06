@@ -32,10 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.txt_tk = new System.Windows.Forms.TextBox();
             this.but_dn = new System.Windows.Forms.Button();
             this.link_taotk = new System.Windows.Forms.LinkLabel();
             this.txt_mk = new System.Windows.Forms.TextBox();
+            this.txt_tk = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,18 +71,6 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // txt_tk
-            // 
-            this.txt_tk.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txt_tk.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tk.Location = new System.Drawing.Point(139, 155);
-            this.txt_tk.Multiline = true;
-            this.txt_tk.Name = "txt_tk";
-            this.txt_tk.Size = new System.Drawing.Size(237, 23);
-            this.txt_tk.TabIndex = 0;
-            this.txt_tk.Click += new System.EventHandler(this.txt_tk_Click);
-            // 
             // but_dn
             // 
             this.but_dn.BackColor = System.Drawing.SystemColors.WindowFrame;
@@ -115,13 +103,21 @@
             // 
             this.txt_mk.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txt_mk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mk.Location = new System.Drawing.Point(139, 208);
-            this.txt_mk.Multiline = true;
+            this.txt_mk.Location = new System.Drawing.Point(132, 210);
             this.txt_mk.Name = "txt_mk";
-            this.txt_mk.Size = new System.Drawing.Size(237, 23);
-            this.txt_mk.TabIndex = 1;
+            this.txt_mk.Size = new System.Drawing.Size(237, 24);
+            this.txt_mk.TabIndex = 23;
             this.txt_mk.UseSystemPasswordChar = true;
-            this.txt_mk.Click += new System.EventHandler(this.txt_mk_Click_1);
+            // 
+            // txt_tk
+            // 
+            this.txt_tk.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.txt_tk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tk.Location = new System.Drawing.Point(132, 157);
+            this.txt_tk.Multiline = true;
+            this.txt_tk.Name = "txt_tk";
+            this.txt_tk.Size = new System.Drawing.Size(237, 24);
+            this.txt_tk.TabIndex = 22;
             // 
             // login
             // 
@@ -131,9 +127,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(489, 335);
             this.Controls.Add(this.txt_mk);
+            this.Controls.Add(this.txt_tk);
             this.Controls.Add(this.link_taotk);
             this.Controls.Add(this.but_dn);
-            this.Controls.Add(this.txt_tk);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -154,10 +150,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox txt_tk;
         private System.Windows.Forms.Button but_dn;
         private System.Windows.Forms.LinkLabel link_taotk;
         private System.Windows.Forms.TextBox txt_mk;
+        private System.Windows.Forms.TextBox txt_tk;
     }
 }
 

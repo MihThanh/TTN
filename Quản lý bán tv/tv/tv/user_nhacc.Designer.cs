@@ -269,6 +269,7 @@
             this.Controls.Add(this.panel5);
             this.Name = "user_nhacc";
             this.Size = new System.Drawing.Size(854, 420);
+            this.Load += new System.EventHandler(this.user_nhacc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_nhacc)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

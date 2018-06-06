@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="delegate.cs" />
     <Compile Include="hethong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,18 @@
     <Compile Include="them.Designer.cs">
       <DependentUpon>them.cs</DependentUpon>
     </Compile>
+    <Compile Include="user_nhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_nhanvien.Designer.cs">
+      <DependentUpon>user_nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_phongban.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user_phongban.Designer.cs">
+      <DependentUpon>user_phongban.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="hethong.resx">
       <DependentUpon>hethong.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="them.resx">
       <DependentUpon>them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_nhanvien.resx">
+      <DependentUpon>user_nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user_phongban.resx">
+      <DependentUpon>user_phongban.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

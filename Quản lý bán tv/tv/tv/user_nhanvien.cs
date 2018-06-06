@@ -33,9 +33,9 @@ namespace tv
 
         void ketnoi()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
             con.Open();
-            string sql_sp = "select * from NHANVIEN";
+            string sql_sp = "exec xem_nhanvien";
             SqlCommand com = new SqlCommand(sql_sp, con);
             SqlDataAdapter data = new SqlDataAdapter(com);
             DataTable table = new DataTable();
@@ -51,12 +51,11 @@ namespace tv
             txt_sdt.DataBindings.Add("Text", data_nv.DataSource, "SDT");
         }
 
-        //hong
         private void but_them_sp_Click(object sender, EventArgs e)
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string them = "insert into NHANVIEN(MANV, HOTEN, NGAYSINH, SDT) values('"+ txt_manv.Text +"', N'"+ txt_tennv.Text +"', '"+ date_ngaysinh.Text +"', '"+ txt_sdt.Text +"')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -76,7 +75,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string xoa = "delete NHANVIEN where MANV = '"+ txt_manv.Text +"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);
@@ -90,7 +89,7 @@ namespace tv
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }
@@ -98,7 +97,7 @@ namespace tv
         private void txt_tim_nv_TextChanged(object sender, EventArgs e)
         {
 
-             SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+             SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
              con.Open();
              string timkiem = "select * from NHANVIEN where MANV LIKE '%" + txt_tim_nv.Text + "%'";
              SqlCommand com_tim = new SqlCommand(timkiem, con);
@@ -113,7 +112,7 @@ namespace tv
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Open();
                 string sua = "EXEC Sua_nv @ma='"+ txt_manv.Text +"',@ten=N'"+ txt_tennv.Text +"',@ngaysinh='"+ date_ngaysinh.Text +"',@sdt='"+ txt_sdt.Text +"'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -127,7 +126,7 @@ namespace tv
             }
             finally
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=BANTIVI;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=BANTIVI;Integrated Security=True");
                 con.Close();
             }
         }

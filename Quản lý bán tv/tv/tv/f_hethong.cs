@@ -102,6 +102,18 @@ namespace tv
                 user_nhanvien.Instance.BringToFront();
         }
 
+        private void but_kh_Click(object sender, EventArgs e)
+        {
+            if (!panel.Controls.Contains(user_kh.Instance))
+            {
+                panel.Controls.Add(user_kh.Instance);
+                user_kh.Instance.Dock = DockStyle.Fill;
+                user_kh.Instance.BringToFront();
+            }
+            else
+                user_kh.Instance.BringToFront();
+        }
+
 
     }
 }

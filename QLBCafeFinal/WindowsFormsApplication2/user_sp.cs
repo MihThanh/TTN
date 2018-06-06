@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM sanpham";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO sanpham (masp ,tensp,maloai,giaban ,soluong ) VALUES ('" + txt_sp_masp.Text + "',N'" + txt_sp_tensp.Text + "','" + txt_sp_maloai.Text + "','" + txt_sp_gb.Text + "','" + txt_sp_sl.Text + "')";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update sanpham set tensp=N'" + txt_sp_tensp.Text + "',maloai='" + txt_sp_maloai.Text + "',giaban='" + txt_sp_gb.Text + "' ,soluong='" + txt_sp_sl.Text + "' where masp = '" + txt_sp_masp.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete sanpham where mansp='" + txt_sp_masp.Text + "'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

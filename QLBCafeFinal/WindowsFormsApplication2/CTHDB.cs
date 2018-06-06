@@ -24,7 +24,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sql = "SELECT * FROM ct_hoadonban";
                 SqlCommand com = new SqlCommand(sql, con);
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication2
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string them = "INSERT INTO ct_hoadonban (mahdb ,masp ,soluong,thanhtien ,dongia ) VALUES ('" + txt_cthdb_ma.Text + "','" + txt_cthdb_masp.Text + "'," + txt_cthdb_sl.Text + "," + txt_cthdb_tt.Text + "," + txt_cthdb_dg.Text + ")";
                 SqlCommand com_them = new SqlCommand(them, con);
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string sua = "update ct_hoadonban set  soluong="+txt_cthdb_sl.Text+",thanhtien="+txt_cthdb_tt.Text+" ,dongia="+txt_cthdb_dg.Text+" where manhdb = '" + txt_cthdb_ma.Text + "' and masp='" + txt_cthdb_ma.Text + "'";
                 SqlCommand com_sua = new SqlCommand(sua, con);
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication2
             try
             {
 
-                SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
                 con.Open();
                 string xoa = "delete ct_hoadonban where mahbb='" + txt_cthdb_ma.Text + "' and masp='"+txt_cthdb_masp.Text+"'";
                 SqlCommand com_xoa = new SqlCommand(xoa, con);

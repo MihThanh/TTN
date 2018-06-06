@@ -19,7 +19,7 @@ namespace WindowsFormsApplication2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=bancafe;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=bancafe2;Integrated Security=True");
             con.Open();
             string sql_sp = "SELECT     hoadonban.makh, khachhang.tenkh FROM hoadonban INNER JOIN khachhang ON hoadonban.makh = khachhang.makh where hoadonban.ngayban BETWEEN '" + d1.Text + "' AND '" + d2.Text + "' group by hoadonban.makh, khachhang.tenkh";
             SqlCommand com = new SqlCommand(sql_sp, con);
